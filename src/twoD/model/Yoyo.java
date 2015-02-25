@@ -1,6 +1,6 @@
 package twoD.model;
 
-public class Yoyo
+public class Yoyo implements Comparable
 {
 	private String name;
 	private int price;
@@ -13,7 +13,7 @@ public class Yoyo
 		String yoyoString = "";
 		yoyoString += "Why hello there, I am a yoyo and my name is " + name + ".";
 		yoyoString += "I am " + price + "and a cool " + color + "and";
-		if(isCool)
+		if (isCool)
 		{
 			yoyoString += " I am too legit to quit.";
 		}
@@ -21,8 +21,36 @@ public class Yoyo
 		{
 			yoyoString += " I am a sad and boring yoyo.";
 		}
-		
+
 		return yoyoString;
+	}
+	
+/**
+ * Compares Yoyo objects 
+ */
+	public int compareTo(Object otherYoyo)
+	{
+		int comparedValue = 0;
+
+		otherYoyo = (Yoyo) otherYoyo;
+
+		if (otherYoyo instanceof Yoyo)
+		{
+			if (this.isCool = true)
+			{
+				comparedValue = 1;
+			}
+			else
+			{
+				comparedValue = -1;
+			}
+		}
+		else
+		{
+			comparedValue = Integer.MIN_VALUE;
+		}
+		return comparedValue;
+
 	}
 
 	public String getName()

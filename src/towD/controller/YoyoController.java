@@ -38,5 +38,10 @@ public class YoyoController
 	{
 		JOptionPane.showMessageDialog(appFrame, "This is the best Yoyo app thing");
 	}
+
+	public Object[][] getMyYoyo()
+	{
+		return null;
+	}
 	
 }
